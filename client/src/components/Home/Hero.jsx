@@ -18,11 +18,11 @@ const Hero = () => {
         <nav className="z-50 flex items-center justify-between w-full py-4 px-6 md:px-16 lg:px-24 xl:px-40 text-sm">
           <div className="flex items-center gap-2">
             <Send className="h-6 w-6" />
-            <h1 className="font-semibold">VitaForge</h1>
+            <h1 className="text-2xl font-semibold">VitaForge</h1>
           </div>
 
           <div className="hidden md:flex items-center gap-8 transition duration-500 text-slate-800">
-            <Link to='/' className="hover:text-indigo-600 transition">
+            <Link to="/" className="hover:text-indigo-600 transition">
               Home
             </Link>
             <Link href="#features" className="hover:text-indigo-600 transition">
@@ -41,13 +41,13 @@ const Hero = () => {
 
           <div className="flex gap-2">
             <Link
-              href=""
+              to="//app?state=register"
               className="hidden md:block px-6 py-2 bg-indigo-500 hover:bg-indigo-700 active:scale-95 transition-all rounded-full text-white"
             >
               Get started
             </Link>
             <Link
-              to='/login'
+              to="/app?state=login"
               className="hidden md:block px-6 py-2 border active:scale-95 hover:bg-slate-50 transition-all rounded-full text-slate-700 hover:text-slate-900"
             >
               Login
@@ -78,18 +78,18 @@ const Hero = () => {
             menuOpen ? "translate-x-0" : "-translate-x-full"
           }`}
         >
-          <a href="/" className="text-white">
+          <Link to="/" className=" text-white transition">
             Home
-          </a>
-          <a href="/products" className="text-white">
-            Products
-          </a>
-          <a href="/stories" className="text-white">
-            Stories
-          </a>
-          <a href="/pricing" className="text-white">
-            Pricing
-          </a>
+          </Link>
+          <Link href="#features" className="text-white transition">
+            Features
+          </Link>
+          <Link href="#testimonials" className="text-white transition">
+            Testimonials
+          </Link>
+          <Link href="#cta" className="text-white transition">
+            Contact
+          </Link>
           <button
             onClick={() => setMenuOpen(false)}
             className="active:ring-3 active:ring-white aspect-square size-10 p-1 items-center justify-center bg-indigo-600 hover:bg-indigo-700 transition text-white rounded-md flex"
@@ -160,23 +160,22 @@ const Hero = () => {
           </div>
 
           {/* Headline + CTA */}
-          <h1 className="text-5xl md:text-6xl font-semibold max-w-5xl text-center mt-4 md:leading-[70px]">
-            Build stunning websites with{" "}
-            <span className=" bg-gradient-to-r from-indigo-700 to-indigo-600 bg-clip-text text-transparent text-nowrap">
-              PrebuiltUI{" "}
-            </span>{" "}
-            Components.
+          <h1 className="me-2 text-5xl md:text-6xl font-semibold max-w-5xl text-center mt-4 md:leading-[70px]">
+            Design your dream Vitae with
+            <span className="ms-2 me-2 bg-linear-to-r from-indigo-700 to-indigo-600 bg-clip-text text-transparent text-nowrap">
+             AI-powered
+            </span>
+            Resume.
           </h1>
 
           <p className="max-w-md text-center text-base my-7">
-            Explore a growing library of over 320+ beautifully crafted,
-            customizable components.
+            Create, Edit and Download Ai-powered awesome Resumes
           </p>
 
           {/* CTA Buttons */}
           <div className="flex items-center gap-4 ">
-            <a
-              href="/"
+            <Link
+              to="/app"
               className="bg-indigo-500 hover:bg-indigo-600 text-white rounded-full px-9 h-12 m-1 ring-offset-2 ring-1 ring-indigo-400 flex items-center transition-colors"
             >
               Get started
@@ -196,7 +195,7 @@ const Hero = () => {
                 <path d="M5 12h14"></path>
                 <path d="m12 5 7 7-7 7"></path>
               </svg>
-            </a>
+            </Link>
             <button className="flex items-center gap-2 border border-slate-400 hover:bg-indigo-50 transition rounded-full px-7 h-12 text-slate-700">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
