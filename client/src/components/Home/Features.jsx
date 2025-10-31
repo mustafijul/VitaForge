@@ -26,6 +26,8 @@ const Features = () => {
           <span>Simple Process</span>
         </div>
       </div>
+
+      {/* features header */}
       <div className="flex justify-center mb-8">
         <Title
           title="Build your Resume"
