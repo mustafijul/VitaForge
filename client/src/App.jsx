@@ -18,7 +18,7 @@ const App = () => {
         </Route>
 
         <Route path='view/:resumeId' element={<Preview></Preview>}></Route>
-        <Route path='login' element={<Login></Login>}></Route>
+        <Route path='/login' element={<Login></Login>}></Route>
       </Routes>
     </div>
   );
